@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>У Джамшута</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<div class="header">
+		<ul>
+				  <li><a href="#">Home</a></li>
+				  <li><a href="#">About</a></li>
+				  <li><a href="#">Service</a></li>
+				  <li><a href="#">Portfolio</a></li>
+				  <li><a href="#">Contact</a></li>
+				</ul>
+	</div>
+	<header>
+
+		<div class="container">
+			<div class="row">
+
+			<div class="header_border"><p class="header_text">У Джамшута</p></div>
+		</div>
+		</div>
+	</header>
+	<h1 class="body">Головні блюда</h1>
+	<div class="body">
+	<div class="container">
+		<div class="row">
+			{% for index_list in index %}
+			<div class="col-md-3">
+				<img src="{{ index_list.image.url }}" alt="gg">
+				<h2>{{ index_list.name }}</h2>
+				<p>{{index_list.descriptions}}</p>
+				<h3>{{index_list.price  }}грн</h3>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	</div>
+	<footer>
+		<div class="container">
+		<div class="wrapper">
+		  <ul>
+		    <li class="facebook"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+		    <li class="twitter"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+		    <li class="instagram"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+		    <li class="google"><a href="#"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a></li>
+		    <li class="whatsapp"><a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+		  </ul>
+		  </div>
+		</div>
+	</footer>
+</body>
+</html>
